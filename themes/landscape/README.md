@@ -67,6 +67,9 @@ google_plus:
 
 ## Features
 
+### Fancybox
+
+Landscape uses [Fancybox] to showcase your photos. You can use Markdown syntax or fancybox tag plugin to add your photos.
 
 ### Sidebar
 
