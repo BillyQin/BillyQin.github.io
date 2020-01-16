@@ -4,7 +4,8 @@
 
 ## 指令
 > hexo new $title
-  新建一篇文章
+
+新建一篇文章
 
 其他指令见https://hexo.io/zh-cn/docs/commands
 
