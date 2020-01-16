@@ -16,4 +16,5 @@ deploy:
     local-dir: public
     target_branch: master
     on:
+      tags: true
       all_branches: true
