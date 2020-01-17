@@ -18,4 +18,3 @@ deploy:
     target_branch: master
     on:
       all_branches: true
-    local-dir: public
