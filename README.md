@@ -1,3 +1,7 @@
+## Start
+1. yarn
+2. yarn docs:dev
+
 ## About
 * 基于[vuepress](https://v1.vuepress.vuejs.org/zh/)搭建的博客。
 * 代码push后会自动打包和部署。
