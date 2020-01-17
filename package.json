@@ -8,4 +8,7 @@
   "devDependencies": {
     "vuepress": "^1.2.0"
   }
+  "scripts": {
+    "docs:build": "vuepress build docs"
+  }
 }
