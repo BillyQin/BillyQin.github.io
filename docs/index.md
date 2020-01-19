@@ -1,5 +1,8 @@
+---
+sidebar: false
+---
 > 这是一个**前端小朋友**的博客
 
 ## 前端
-* [TypeScript](/typescript/1.html)
-* webpack
+<!-- * [TypeScript](/typescript/1.html) -->
+* [Git](/git/1.html)

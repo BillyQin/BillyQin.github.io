@@ -8,5 +8,11 @@ module.exports = {
       { text: '关于', link: '/guide/' },
       { text: 'Github', link: 'https://github.com/BillyQin/BillyQin.github.io' },
     ],
+    sidebar: [
+      '/git/1',
+      '/git/2',
+    ],
+    displayAllHeaders: true,
+    sidebarDepth: 2
   }
 }
