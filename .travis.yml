@@ -8,7 +8,7 @@ branches:
     - vuepress # build vuepress branch only
 script:
   - yarn install
-  - yarn docs:build
+  - yarn build
 deploy:
   - provider: pages
     skip-cleanup: true

@@ -1,4 +1,5 @@
 > 这是一个**前端小朋友**的博客
 
 ## 前端
-* TypeScript
+* [TypeScript](/typescript/1.html)
+* webpack
