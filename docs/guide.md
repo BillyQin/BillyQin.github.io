@@ -1,3 +1,3 @@
-## test
+## 关于
 
-this is guide
+这是关于页面

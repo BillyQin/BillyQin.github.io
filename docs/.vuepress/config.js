@@ -5,14 +5,19 @@ module.exports = {
   themeConfig: {
     nav: [
       { text: '首页', link: '/' },
-      { text: '关于', link: '/guide/' },
-      { text: 'Github', link: 'https://github.com/BillyQin/BillyQin.github.io' },
+      // { text: '关于', link: '/guide/' },
+      { text: 'Github', link: 'https://github.com/BillyQin' },
     ],
-    sidebar: [
-      '/git/1',
-      '/git/2',
-    ],
-    displayAllHeaders: true,
-    sidebarDepth: 2
-  }
+    sidebar: {
+        '/git/': [
+          '1',
+          '2'
+        ],
+        '/dataStruct/': [
+          'queue'
+        ]
+    },
+    // displayAllHeaders: true,
+    // sidebarDepth: 2
+  },
 }
