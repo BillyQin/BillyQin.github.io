@@ -15,6 +15,9 @@ module.exports = {
         ],
         '/dataStruct/': [
           'queue'
+        ],
+        '/js/': [
+          'promise'
         ]
     },
     // displayAllHeaders: true,

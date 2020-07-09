@@ -7,3 +7,5 @@ sidebar: false
 <!-- * [TypeScript](/typescript/1.html) -->
 * [Git](/git/1.html)
 * [数据结构](/dataStruct/queue.html)
+* [JavaScript](/js/promise.html)
+
