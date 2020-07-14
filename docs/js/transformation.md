@@ -1,6 +1,6 @@
 # 数据类型转换的4大核心规则
 
-## 1. 其他数据转Number
+## 其他数据转Number
 ### 手动转换方法
 * **parseInt / parseFloat**
 
@@ -35,7 +35,7 @@ Number(true) // => 1
 * ==比较的时候
 * isNaN([val]) // 先用Number转成数字，再判断是否NaN
 
-## 2. 其他数据转String
+## 其他数据转String
 ### 手动转换方法
 * toString()
 * String()
@@ -62,30 +62,32 @@ Number(a) // => '666'
 
 * 基于alert/confirm/prompt/document.write 等这些方式输出内容，都需要将内容先转成字符串
 
-## 3. 其他数据转布尔
+## 其他数据转布尔
 * 手动转换
-    ！转布尔后取反
-    ！！转布尔
-    Boolean(val)
+    1. ![val]    // 转布尔后取反
+    2. !![val]   // 转布尔
+    3. Boolean([val])
 * 隐式转换
-    循环或者条件判断中，条件处理的结果就是布尔类型
+    1. 循环或者条件判断中，条件处理的结果就是布尔类型
+    2. 只有 0、NaN、''、null、undefined 这五种情况转布尔后是false,其他是true
 
-规则  只有 0、NaN、''、null、undefined 这五种情况转布尔后是false,其他是true
-
-## 4. ==比较的过程中，数据转换的规则
+## ==比较的过程中，数据转换的规则
 * **特殊点**(表面上看上去是相同，其实是false)
+```js
+  console.log({} == {})     // false  比较的是对象的堆内存地址
 
- {} == {}: false // 比较的是对象的堆内存地址
+  console.log([] == [])     // false 比较的是数组的堆内存地址
 
- [] == []: false // 比较的是数组的堆内存地址
+  console.log(NaN == NaN)   // false
 
- NaN == NaN: false
+  console.log(Symbol(1) == Symbol(1)) // false
+```
 
 * **类型不一样的转换规则**
-    - null == undefined // => true
-    - null === undefined // => false
-    - 字符串 == 对象 要把对象转换为字符串
-    - 剩下如果 == 两边数据类型不一致，都需要转换为数字再比较
+  1. null == undefined // => true
+  2. null === undefined // => false
+  3. 字符串 == 对象 要把对象转换为字符串
+  4. 剩下的情况如果 == 两边数据类型不一致，都需要转换为数字再比较
 
 ```js
 // [] => '' => 0, false => 0
@@ -94,7 +96,7 @@ console.log([] == false)  // true
 console.log(![] == false) // true
 ```
 
-* **对象隐式变数字**，应该先调用valueOf，如果没有值再调用toString变成字符串，最后字符串转数字
+* **对象隐式变数字**，应该先调用valueOf，如果valueOf的值不是基本类型，再调用toString变成字符串，最后字符串转数字
 
 ```
 var a = {

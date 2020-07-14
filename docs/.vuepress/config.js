@@ -17,9 +17,9 @@ module.exports = {
           'queue'
         ],
         '/js/': [
-          'promise',
           'hoisting',
-          'transformation'
+          'transformation',
+          'promise',
         ]
     },
     // displayAllHeaders: true,
