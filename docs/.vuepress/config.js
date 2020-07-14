@@ -18,7 +18,8 @@ module.exports = {
         ],
         '/js/': [
           'promise',
-          'hoisting'
+          'hoisting',
+          'transformation'
         ]
     },
     // displayAllHeaders: true,
