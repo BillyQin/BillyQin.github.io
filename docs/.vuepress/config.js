@@ -18,6 +18,7 @@ module.exports = {
         ],
         '/js/': [
           'hoisting',
+          'this',
           'transformation',
           'promise',
         ]
