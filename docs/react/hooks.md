@@ -42,7 +42,7 @@ function Counter() {
 }
 ```
 
-### “陷阱”
+## “陷阱”
 
 1. 修改状态的函数类似 class 组件的 this.setState,但是它不会把新的 state 和旧的 state 合并。
 
@@ -167,9 +167,7 @@ function Counter() {
 }
 ```
 
-## 优化
-
-> 减少组件的渲染次数
+## 优化 - 减少组件的渲染次数
 
 1. 函数组件使用 memo 来达到类组件中 PureComponent 同样的效果
 
@@ -270,6 +268,8 @@ function useState(initialValue) {
 > 组件中可能会多次调用useState, 使用第一版的值就会出现覆盖
 
 > 采用数组记录多个useState的值，所以不能在循环、条件语句(if、while、for)中调用useState。否则useState的值会错乱
+
+
 ```js
 let lastStates = [];
 let index = 0;
