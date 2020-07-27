@@ -42,7 +42,7 @@ function Counter() {
 }
 ```
 
-### 陷阱
+### “陷阱”
 
 1. 修改状态的函数类似 class 组件的 this.setState,但是它不会把新的 state 和旧的 state 合并。
 
