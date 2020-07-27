@@ -21,6 +21,9 @@ module.exports = {
           'this',
           'transformation',
           'promise',
+        ],
+        '/react/': [
+          'hooks'
         ]
     },
     // displayAllHeaders: true,
