@@ -9,5 +9,7 @@ sidebar: false
 * [JavaScript](/js/hoisting.html)
 * [React](/react/hooks.html)
 * [数据结构](/dataStruct/queue.html)
+* [算法](/algo/bsearch.html)
+
 
 

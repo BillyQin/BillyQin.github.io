@@ -1,6 +1,6 @@
 module.exports = {
   title: "BillyQin's Blog",
-  description: 'This is BillyQin Blog',
+  description: '覃昶栋的前端技术博客',
   home: false,
   themeConfig: {
     nav: [
@@ -24,6 +24,9 @@ module.exports = {
         ],
         '/react/': [
           'hooks'
+        ],
+        '/algo/': [
+          'bsearch'
         ]
     },
     // displayAllHeaders: true,
