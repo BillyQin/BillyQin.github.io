@@ -1,6 +1,7 @@
 module.exports = {
   title: "BillyQin's Blog",
-  description: '覃昶栋的前端技术博客',
+  description: '覃昶栋的博客',
+  keywords: '覃昶栋的博客',
   home: false,
   themeConfig: {
     nav: [
