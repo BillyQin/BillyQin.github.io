@@ -28,6 +28,9 @@ module.exports = {
         ],
         '/algo/': [
           'bsearch'
+        ],
+        '/money/': [
+          'option'
         ]
     },
     // displayAllHeaders: true,
