@@ -1,0 +1,70 @@
+## 中性策略是什么？ 赚的什么钱？
+* 中性策略本质上就是选币。根据过往的k线数据结合对应的因子（cci、bias、cmo等）选出对应的币并进行对应的做多、做空操作。
+* 再往深一步就是趋势。先根据因子选出强者恒强的币，再选出
+
+## 基本中性策略
+1. 数据准备
+  * 数据合并（将每一天的k线数据合并每一个币种一个文件的格式，每个币种需要合并出1m、5m两个数据）
+  * 将5分钟的数据合并的1小时的k线数据
+> 为啥不直接获取1小时的k线数据？
+
+2. 选币数据整理
+  * 遍历持币周期和币种，读取数据，计算因子排名
+  * 合并多个offset
+  * 将不同的币种合并到一张表里
+
+> 差分是什么？ 财不如急门
+
+## 基于横截面的中性策略
+
+1. 基本中性是根据单一因子，每次选出一个币种做多，一个币种做空。影响币价的因素很多，容易遇到极大的回撤
+2. 横截面是可以根据多因子，每个因子计算出分数以后根据权重相加，选出分数最高的一个币种
+
+## TODO
+1. 研究实盘代码流程
+2. 环境搭建攻略 https://forum.quantclass.cn/d/3961-ubuntutalib10/2
+2. 多策略如何并行
+  https://forum.quantclass.cn/d/3914-k/6 k线共享 原理和ok一样
+3. 收集可用因子集，并自行回测
+
+ 新实盘策略方向 6H、 8H -> https://forum.quantclass.cn/d/3626-biascci12878459605936-72625/38
+
+  * 基于横截面 bias等因子组合构建中性策略 https://forum.quantclass.cn/d/3706-bias30337034226903-9939/4
+  *  基于横截面bias,cci等因子组合 8因子 https://forum.quantclass.cn/d/3626-biascci12878459605936-72625
+  * 基于REG差分和CCI的简单横截面组合 https://forum.quantclass.cn/d/3518-regcci721526-858006-12239
+  * 基于REG差分，CCI、PVT的横截面组合 https://forum.quantclass.cn/d/3877-regccipvt508369-560461-5050
+  * 基于vma_bias、PMO、REG、CMO横截面组合 https://forum.quantclass.cn/d/3531-xx-vma-biaspmoregcmo
+  * 横截面REG,RCCD因子组合 https://forum.quantclass.cn/d/3542-regrccd22531045044
+  * 基于reg_diff,PMO,DBCD_diff因子构建的复合因子 https://forum.quantclass.cn/d/3550-zack-reg-diffpmodbcd-diff358723785191727
+  * 横截面reg，vix因子组合构建 https://forum.quantclass.cn/d/3574-regvix2482545
+  * 参考 横截面bias,cci,cmo因子 https://forum.quantclass.cn/d/3578-biasccicmo860554448366635/2
+  * 基于v1上轨 reg 的简单横截面 https://forum.quantclass.cn/d/3593-v1-reg-59486151314917611476
+  * 基于横截面bias, cci，cmo，force因子组合 https://forum.quantclass.cn/d/3617-bias-ccicmoforce11854012042275-5636
+  * 横截面REG与gap,cci因子组合 https://forum.quantclass.cn/d/3621-reggapccioffset-140171-1030817-9166
+  * 基于gap,reg_diff因子构建 https://forum.quantclass.cn/d/3623-gapreg-diff2870441041
+  * 横截面bias,magic_cci,RCCD因子组合 https://forum.quantclass.cn/d/3649-7biasmagic-ccirccd16361-90055-6343
+  * 横截面dhRCCD,bias,reg_diff差分因子 https://forum.quantclass.cn/d/3658-dhrccdbiasreg-diff-3757-12658-90
+  * 基于bolling, reg_diff，rccd，dbcd因子 https://forum.quantclass.cn/d/3665-xiluobolling-reg-diffrccddbcd2887419659
+  * 横截面reg,rccd,magic_cci因子组合 https://forum.quantclass.cn/d/3666-nanikunregrccdmagic-cci108077-627566-5391
+  * 横截面复合因子zackfactor,cci因子组合 https://forum.quantclass.cn/d/3682-kopo-jinzackfactorcci4352272-7916181-5569
+  *  前dhRCCD, reg, ADTM横截面 https://forum.quantclass.cn/d/3690-vwap-bias-dhrccd-reg-adtm1452835-268953-4826
+  * 基于bias,magic_cci，tr_trix因子 https://forum.quantclass.cn/d/3702-biasmagic-ccitr-trix10911177928
+  * J神 基于横截面bias,cci因子组合构 https://forum.quantclass.cn/d/3708-j-biascci2598918329156607
+  * 基于DBCD_diff, RCCD_diff的因子挖掘 https://forum.quantclass.cn/d/3727-boston-dbcd-diff-rccd-diff14865-23623-8291
+  * 【回测】wilson-k基于横截面gap_diff,前dhRCCD,reg_diff指标构建中性因子(年化收益/最大回撤：3498, 8112, 52) https://forum.quantclass.cn/d/3729-wilson-kgap-diffdhrccdreg-diff3498-8112-52
+  * 基于横截面mtm_mean, magic_cci, rccd因子  https://forum.quantclass.cn/d/3731-mtm-mean-magic-cci-rccd27041054645126205
+  * 基于Bias cci rccd的因子 https://forum.quantclass.cn/d/3734-vincentk-bias-cci-rccd34497515452925915275
+  *  基于bias,cci，gap因子构建的 https://forum.quantclass.cn/d/3739-biasccigap15172463733
+  * 横截面bias，CCI，CMO，REG，GAP因子组合 https://forum.quantclass.cn/d/3747-biasccicmoreggap47648218437385487
+  * 丁老板 横截面 bias等因子组合构建 https://forum.quantclass.cn/d/3751-bias-103771461541056-12596
+  * 横截面bias+cci+cmo+gap https://forum.quantclass.cn/d/3774-biasccicmogap50183
+  * 基于bias,cci,前dhRCCD,ADTM因子组合 https://forum.quantclass.cn/d/3775-tiantangxbiasccidhrccdadtm1074-9498-79
+  * 基于横截面reg_diff, cmo, cci https://forum.quantclass.cn/d/3833-rongwl-reg-diff-cmo-cci8507435-213404-703
+  * 基于cci，reg_diff，sreg构建的因子 https://forum.quantclass.cn/d/3841-ccireg-diffsreg6353666666666666
+  * 基于reg_diff 和 pmo 的因子 https://forum.quantclass.cn/d/3859-thhh-reg-diff-pmo-77312747839
+  * 基于船队热门因子的遗传挖掘 https://forum.quantclass.cn/d/3882-freestep-121046925-68897255-351865
+  * 基于船队热门因子的遗传挖掘 https://forum.quantclass.cn/d/3883-freestep-2337705-15505104-17627800000000002
+  *
+3. 多因子上实盘
+4. 自己挖掘因子
+
